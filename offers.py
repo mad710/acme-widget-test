@@ -22,19 +22,19 @@ class HalfPriceForSecond(Offer):
         """
         self.product_codes = set(product_codes)
         
-    def get_discounted_price(self, cart_products: list) -> int:
+    def get_discounted_price(self, cart_product_codes: list) -> int:
         """
         Returns the offer amount for the given cart items
         
-        :param cart_products list: List of cart products (< class 'product.Product'>)
+        :param cart_product_codes list: List of product codes in cart
         """
         total = 0
         product_counts = defaultdict(int)
-        for product in cart_products:
-            product_counts[product.code] += 1
-            if product.code in self.product_codes:
+        for product_code in cart_product_codes:
+            product_counts[product_code] += 1
+            if product_code in self.product_codes:
                 # Product has offer
-                if product_counts[product.code] % 2 == 0:
+                if product_counts[product_code] % 2 == 0:
                     # Reduce price by half for every even count of that product
                     total += product.price / 2
                 else:
