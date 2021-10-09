@@ -28,3 +28,7 @@ class Basket:
     def total(self) -> int:
         return self.total_cart_amount + \
                self.delivery_price_helper.get_delivery_price(self.total_cart_amount)
+    
+    
+    def clear(self):
+        self.cart = []
