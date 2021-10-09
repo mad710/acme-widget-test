@@ -71,7 +71,7 @@ basket.total()
 ```
 
 
-Improvements:
+## Improvements:
 - We could update the total amount every time the cart is updated instead of calculating it every time when the total is calculated.
 - HalfPriceForSecond offer class could be generalized to accept any factor of price reduction (1/3rd, 1/4th or any percentage like 40% etc)
 - Basic functionality of basket.remove(product_code) functionality has to be provided
