@@ -1,6 +1,7 @@
 from product import Product
 from helpers import AmountDeliveryPriceHelper
 from offers import HalfPriceForSecond
+from basket import Basket
 
 rw = Product('R01', 'Red Widget', 32.95)
 gw = Product('G01', 'Green Widget', 24.95)
